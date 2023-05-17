@@ -1,0 +1,19 @@
+.header{
+    background-color: blue;
+    height: 200px;
+}
+
+.section1{
+    background-color: pink;
+    height: 400px;
+}
+
+.section2{
+    background-color: orange;
+    height: 400px;
+}
+
+.footer{
+    background-color: green;
+    height: 200px;
+}

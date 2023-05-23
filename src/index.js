@@ -1,5 +1,5 @@
 import './styles.css';
-import addHomePage from 'src/initialLoadFunction.js';
+import {addHomePage} from './initialLoadFunction.js';
 
 
 addHomePage();

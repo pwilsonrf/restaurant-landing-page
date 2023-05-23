@@ -1,8 +1,9 @@
-export default addHomePage;
 
-function addHomePage (){
+console.log('this is a test');
+export function addHomePage (){
     
     const mainContainer = document.getElementById('content');
+    // mainContainer.innerText = "hello";
 
 
     const header = document.createElement('div');
@@ -20,5 +21,6 @@ function addHomePage (){
     const footer = document.createElement('div');
     footer.className = "footer";
     mainContainer.appendChild(footer);
+    return mainContainer;
     
 }

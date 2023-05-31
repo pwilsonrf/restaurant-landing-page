@@ -3,7 +3,7 @@
     height:100px;
 
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 4fr;
     grid-template-rows: 1fr;
 }
 
@@ -17,12 +17,14 @@
 }
 
 .nav-item-container {
-    width: 120px;
     background-color: green;
     margin: auto;
     display: flex;
     justify-content: center;
+    flex: 1;
 }
+
+
 
 #logo-container{
     justify-self: left;
@@ -37,6 +39,15 @@
 .section1{
     background-color: green;
     height: 400px;
+
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+
+#section1-img{
+    width: auto;
+    height: 50vh;
 }
 
 .section2{
@@ -48,3 +59,4 @@
     background-color: green;
     height: 200px;
 }
+

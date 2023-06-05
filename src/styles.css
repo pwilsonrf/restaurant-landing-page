@@ -1,14 +1,41 @@
 :root {
     --h2-size: 36px;
     --h3-size: 24px;
+    --button-text-size: 16px;
     --p-size: 16px;
-
     --section-padding: 20px 10% 20px 10%;
+    --font-regular: "Poppins Regular", 'sans-serif';
+    --font-bold: "Poppins Black", 'sans-serif';
+
+
+    /* Colors*/
+    --color1: #171717;
+    --color2: #444444;
+    --color3: #DA0037;
+    --color4: #EDEDED;
+    --color5: #ffffff;
+
+   
+
+
+
 }
 
 
+@font-face{
+    font-family: "Poppins Black";
+    src: url("./font/Poppins-Black.ttf");
+}
+
+@font-face{
+    font-family: "Poppins Regular";
+    src: url("./font/Poppins-Medium.ttf");
+}
+
+
+
 .header{
-    background-color: orange;
+    background-color: var(--color1);
     height:100px;
 
     display: grid;
@@ -26,7 +53,7 @@
 }
 
 .nav-item-container {
-    background-color: green;
+    background-color: var(--color2);
     margin: auto;
     display: flex;
     justify-content: center;
@@ -39,14 +66,14 @@
     justify-self: left;
     grid-column: 1/2;
 
-    background-color: pink;
+    background-color: var(--color3);;
     height: 50px;
     width: 100px;
     margin: auto;
     margin-left: 30px;
 }
 .section1{
-    background-color: green;
+    background-color: var(--color2);;
     height: 400px;
 
     display: grid;
@@ -62,22 +89,39 @@
 }
 
 .section2{
-    background-color: pink;
+    background-color: var(--color4);;
     height: 400px;
 
     padding: var(--section-padding); 
 }
 
 .footer{
-    background-color: green;
+    background-color: var(--color1);;
     height: 200px;
 }
 
 .h3-text{
     font-size: var(--h3-size);
+    font-family: var(--font-regular);
 }
 
 .paragraph{
     font-size: var(--p-size);
+    font-family: var(--font-regular);
 }
 
+.button{
+    font-size: var(--button-text-size);
+    font-family: var(--font-regular);
+    
+}
+
+a{
+    color: var(--color5);
+    font-size: var(--button-text-size);
+    font-family: var(--font-regular);
+}
+
+.textSection{
+    width: 400px;
+}

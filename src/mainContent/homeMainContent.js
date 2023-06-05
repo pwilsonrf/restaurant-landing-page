@@ -10,12 +10,12 @@ export function homeMainContent() {
     appendAChild(mainContainer, section1);
     
     //Section 1 Content - LEFT
-    const section1left = createElement('div');
-    const section1h1 = createElement('h1', '', '', 'Pass All of Your Civil Engineering classes with A');
+    const section1left = createElement('div', 'textSection');
+    const section1h1 = createElement('h3', 'h3-text', 'h2-tutoring-section', 'Pass All of Your Civil Engineering classes with A');
     const section1P= createElement('p', 'paragraph', 'p-tutoring-section', 'CivETech helps our students to gain the skills and knowledge to excel in every assignment and exams in all Civil Engineering subjects');
     const section1ButtonContainer = createElement('div', '', 'Section1-Button-Container');
-    const section1Button1 = createElement('button', '', 'Section1-Button1', 'Get started');
-    const section1Button2 = createElement('button', '', 'Section1-Button2', 'Learn more');
+    const section1Button1 = createElement('button', 'button', 'Section1-Button1', 'Get started');
+    const section1Button2 = createElement('button', 'button', 'Section1-Button2', 'Learn more');
     appendAChild(section1ButtonContainer, section1Button1);
     appendAChild(section1ButtonContainer, section1Button2);
     appendAChild(section1left, section1h1);

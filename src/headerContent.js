@@ -1,10 +1,10 @@
-import {linkToPricing, linkToAboutUs, linkToCategories, linkToSuccessStories, linkToGetStarted} from './categories.js';
 import {categoriesMainContent} from './mainContent/categoriesMainContent.js';
 import {pricingMainContent} from './mainContent/pricingMainContent.js';
 import {getStartedMainContent} from './mainContent/getStartedMainContent.js';
 import {aboutMainContent} from './mainContent/aboutMainContent.js';
 import {successStoriesMainContent} from './mainContent/successStoriesMainContent.js';
 import {homeMainContent} from './mainContent/homeMainContent.js';
+import {createElement, appendAChild} from './generalFunctions';
 
 /*
 Creates header content
@@ -40,43 +40,5 @@ export function headerContent (){
     //Append logo and nav bar to header
     header.appendChild(logo);
     header.appendChild(navBar);
-
-    /*
-        Create element and append to DOM
-        Args:
-            - element: New element type to create (e.g. 'div')
-            - text: Inner text for element
-            - parent: Parent container to append new element to.
-            - className: New element class name
-            - id: New element id
-            - source: Add source attribute for anchor, if applicable
-    */
-    function createElement(element, className = "#", id = "#", text = "", parent, source, content) {
-        const newElement = document.createElement(element);
-        newElement.innerText = text;
-        newElement.className = className;
-        newElement.id = id;
-        newElement.content = content;
-
-        if (parent){
-            parent.appendChild(newElement);
-        }
-
-        if(element === 'a' && source){
-            newElement.href = source;
-        }
-        return newElement;
-    }
-
-    /*
-    Append a child to its parent
-    Args:
-        - Parent: Parent element whom 'child' will be appended to
-        - child: Child element to be appended
-    */
-    function appendAChild(parent, child) {
-        parent.appendChild(child);
-    }
-
     return header;
 }

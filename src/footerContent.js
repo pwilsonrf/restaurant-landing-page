@@ -1,3 +1,5 @@
+import {createElement, appendAChild} from './generalFunctions';
+
 export function footerContent() {
     const footer = document.createElement('div');
     footer.className = "footer";

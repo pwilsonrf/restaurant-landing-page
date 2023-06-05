@@ -1,65 +1,40 @@
+import {createElement, appendAChild, createTextSection} from '../generalFunctions.js'
 /*
     Renders all of the content in the Main Content container in Home Page. 
 */
 export function homeMainContent() {
-    // mainContainer.appendChild(header);
-
-    const mainContainer = document.createElement('div');
+    const mainContainer = createElement('div', 'body-container');
 
     //Section 1 Content
-    const section1 = document.createElement('div');
-    section1.className = "section1";
-    mainContainer.appendChild(section1);
-
+    const section1 = createElement('div', 'section1');
+    appendAChild(mainContainer, section1);
+    
     //Section 1 Content - LEFT
-    const section1left = document.createElement('div');
-    const section1h1= document.createElement('h1');
-    section1h1.innerText = "Pass All of Your Civil Engineering classes with A";
-
-    const section1P= document.createElement('p');
-    section1P.innerText = "CivETech helps our students to gain the skills and knowledge to excel in every assignment and exams in all Civil Engineering subjects";
-
-    const section1ButtonContainer = document.createElement('div');
-    section1ButtonContainer.id = "Section1-Button-Container"
-    const section1Button1 = document.createElement('button');
-    section1Button1.id = "Section1-Button1";
-    section1Button1.innerText = "Get started";
-
-    const section1Button2 = document.createElement('button');
-    section1Button2.innerText = "Learn more";
-    section1Button2.id = "Section1-Button2";
-
-    section1ButtonContainer.appendChild(section1Button1);
-    section1ButtonContainer.appendChild(section1Button2);
-
-    section1left.appendChild(section1h1);
-    section1left.appendChild(section1P);
-    section1left.appendChild(section1ButtonContainer);
-
-   
+    const section1left = createElement('div');
+    const section1h1 = createElement('h1', '', '', 'Pass All of Your Civil Engineering classes with A');
+    const section1P= createElement('p', 'paragraph', 'p-tutoring-section', 'CivETech helps our students to gain the skills and knowledge to excel in every assignment and exams in all Civil Engineering subjects');
+    const section1ButtonContainer = createElement('div', '', 'Section1-Button-Container');
+    const section1Button1 = createElement('button', '', 'Section1-Button1', 'Get started');
+    const section1Button2 = createElement('button', '', 'Section1-Button2', 'Learn more');
+    appendAChild(section1ButtonContainer, section1Button1);
+    appendAChild(section1ButtonContainer, section1Button2);
+    appendAChild(section1left, section1h1);
+    appendAChild(section1left, section1P);
+    appendAChild(section1left, section1ButtonContainer);
 
     //Section 1 Content - RIGHT
-    const section1right = document.createElement('div');
-    const section1img = document.createElement('img');
+    const section1right = createElement('div');
+    const section1img = createElement('img', '', 'section1-img');
     section1img.src = "/src/img/wilson-main-image.png";
-    section1img.id = "section1-img";
-    section1right.appendChild(section1img);
+    appendAChild(section1right, section1img);
+    appendAChild(section1, section1left);
+    appendAChild(section1, section1right);
 
-    section1.appendChild(section1left);
-    section1.appendChild(section1right);
-
-
-    const section2 = document.createElement('div');
-    section2.className = "section2";
-    mainContainer.appendChild(section2);
-
-    const footer = document.createElement('div');
-    footer.className = "footer";
-    mainContainer.appendChild(footer);
-
+    //Section 2
+    const section2 = createElement('div', 'section2');
+    createTextSection('Prepare for the PE Exam', 'h3-text', 'h3-pe-section', 'One-on-One tutoring\
+    can help you answer any last minute questions you have in any section of the PE', 
+    'paragraph', 'p-pe-section', section2);
+    appendAChild(mainContainer, section2);
     return mainContainer;
-}
-
-export function addFooter() {
-
 }

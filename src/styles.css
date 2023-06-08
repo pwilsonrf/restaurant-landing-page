@@ -3,10 +3,9 @@
     --h3-size: 24px;
     --button-text-size: 16px;
     --p-size: 16px;
-    --section-padding: 20px 10% 20px 10%;
+    --section-padding: 40px 10% 50px 10%;
     --font-regular: "Poppins Regular", 'sans-serif';
     --font-bold: "Poppins Black", 'sans-serif';
-
 
     /* Colors*/
     --color1: #171717;
@@ -14,13 +13,7 @@
     --color3: rgba(218, 0, 55, 0.9);
     --color4: #EDEDED;
     --color5: #ffffff;
-
-   
-
-
-
 }
-
 
 @font-face{
     font-family: "Poppins Black";
@@ -31,8 +24,6 @@
     font-family: "Poppins Regular";
     src: url("./font/Poppins-Medium.ttf");
 }
-
-
 
 .header{
     background-color: var(--color1);
@@ -60,8 +51,6 @@
     flex: 1;
 }
 
-
-
 #logo-container{
     justify-self: left;
     grid-column: 1/2;
@@ -72,16 +61,17 @@
     margin: auto;
     margin-left: 30px;
 }
+
 .section1{
     background-color: var(--color2);;
-    height: 400px;
-
     display: grid;
     grid-template-columns: 2fr 1fr;
-
     padding: var(--section-padding);
 }
 
+.section1 p, .section1 h3{
+    color: var(--color5);
+}
 
 #section1-img{
     width: auto;
@@ -90,32 +80,39 @@
 
 .section2{
     background-color: var(--color4);;
-    height: 400px;
+    display: flex;
+    margin: 0px;
+    padding: var(--section-padding);
+    flex-direction: column;
+}
 
-    padding: var(--section-padding); 
+.section2TextContainer, .section3TextContainer{
+    width: 50%;
 }
 
 .section3{
     background-color: var(--color3);;
-    height: 400px;
     padding: var(--section-padding); 
+    display: flex;
+    flex-direction: column;
 }
 
 .section4{
     background-color: var(--color4);;
-    height: 400px;
     padding: var(--section-padding); 
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+}
 
-   
+.section4Text{
+    width: 50vw;
 }
 
 #section4-img{
     width: auto;
-    height: 50vh;
+    height: 25vh;
 }
 
 .section3 p, .section3 h3{
@@ -123,8 +120,13 @@
 }
 
 .footer{
-    background-color: var(--color1);;
-    height: 200px;
+    background-color: var(--color2);;
+    padding: 20px auto 20px auto;
+    color: var(--color5);
+    display: flex;
+    justify-content: center;
+    font-size: var(--p-size);
+    font-family: var(--font-regular);
 }
 
 .h3-text{
@@ -140,7 +142,6 @@
 .button{
     font-size: var(--button-text-size);
     font-family: var(--font-regular);
-    
 }
 
 a{

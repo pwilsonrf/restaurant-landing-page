@@ -32,10 +32,14 @@ export function homeMainContent() {
 
     //Section 2
     const section2 = createElement('div', 'section2');
+    const section2TextContainer = createElement('div', 'section2TextContainer');
+    const section2Text = createElement('div', 'section2Text');
     createTextSection('Walk into the Civil PE Exam with Confidence!', 'h3-text', 'h3-pe-section',
     'We offer personalized guidance to help you use your study time effectively! \n\n Our tutors will help you reinforce on the exam areas that require the most attention \
     and share tips and tricks will allow you to walk with confidence into the PE Exam.', 
-    'paragraph', 'p-pe-section', section2);
+    'paragraph', 'p-pe-section', section2Text);
+    appendAChild(section2TextContainer, section2Text);
+    appendAChild(section2, section2TextContainer);
     const section2ButtonContainer = createElement('div', '', 'Section2-Button-Container');
     const section2Button1 = createElement('button', 'button', 'Section2-Button1', 'Get started');
     const section2Button2 = createElement('button', 'button', 'Section2-Button2', 'Learn more');
@@ -46,10 +50,14 @@ export function homeMainContent() {
 
     //Section 3
     const section3 = createElement('div', 'section3');
+    const section3TextContainer = createElement('div', 'section3TextContainer');
+    const section3Text = createElement('div', 'section3Text');
     createTextSection('Let CivE Tutors be your trusted partners towards FE Success!', 'h3-text', 'h3-pe-section',
     'Our aim is not only to help you pass the FE exam but also deepen your understanding \
     on the subject matter for career success!', 
-    'paragraph', 'p-pe-section', section3);
+    'paragraph', 'p-pe-section', section3Text);
+    appendAChild(section3TextContainer, section3Text);
+    appendAChild(section3, section3TextContainer);
     const section3ButtonContainer = createElement('div', '', 'Section3-Button-Container');
     const section3Button1 = createElement('button', 'button', 'Section3-Button1', 'Get started');
     const section3Button2 = createElement('button', 'button', 'Section3-Button2', 'Learn more');
@@ -60,18 +68,19 @@ export function homeMainContent() {
 
     //Section 4 - Our Tutors
     const section4 = createElement('div', 'section4');
+    const section4Text = createElement('div', 'section4Text')
     createTextSection('Meet Our Tutors!', 'h3-text', 'h3-pe-section',
     'Our tutors have over 6 years of hands-on Professional Engineering experience in Civil Engineering!'
-    , 'paragraph', 'p-pe-section', section4);
+    , 'paragraph', 'p-pe-section', section4Text);
+    appendAChild(section4, section4Text)
     const section4img = createElement('img', '', 'section4-img');
-    section4img.src = "/src/img/wilson-main-image.png";
+    section4img.src = "/src/img/wilson-img.png";
     appendAChild(section4, section4img);
     const section4ButtonContainer = createElement('div', '', 'Section4-Button-Container');
-    const section4Button1 = createElement('button', 'button', 'Section4-Button1', 'Get started');
-    const section4Button2 = createElement('button', 'button', 'Section4-Button2', 'Learn more');
+    const section4Button1 = createElement('button', 'button', 'Section4-Button1', 'Learn more about our Tutors');
     appendAChild(section4ButtonContainer, section4Button1);
-    appendAChild(section4ButtonContainer, section4Button2);
     appendAChild(section4, section4ButtonContainer);
     appendAChild(mainContainer, section4);
+    
     return mainContainer;
 }

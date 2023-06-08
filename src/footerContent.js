@@ -5,10 +5,7 @@ export function footerContent() {
     footer.className = "footer";
     
 
-    const footerText = createElement('p', '', 'footer-text');
+    const footerText = createElement('p', '', 'footer-text', 'Copyright ⓒ 2023 CivE Tutors. All Rights Reserved.');
     footer.appendChild(footerText);
-
     return footer;
-    
-    
 }

@@ -40,15 +40,19 @@
     display: flex;
     gap: 30px;
     margin-right: 30px;
-
 }
 
+
 .nav-item-container {
-    background-color: var(--color2);
+    white-space: nowrap;
     margin: auto;
     display: flex;
     justify-content: center;
     flex: 1;
+}
+
+.nav-item{
+
 }
 
 #logo-container{
@@ -121,12 +125,22 @@
 
 .footer{
     background-color: var(--color2);;
-    padding: 20px auto 20px auto;
     color: var(--color5);
     display: flex;
-    justify-content: center;
+    padding: var(--section-padding); 
     font-size: var(--p-size);
     font-family: var(--font-regular);
+    justify-content: space-between;
+}
+
+.footer .nav-item , .footer .contact-item, .nav-item{
+    display: block;
+    text-decoration: none;
+}
+
+.footer .nav-item:hover , .footer .contact-item:hover, .nav-item:hover{
+    scale: 1.05;
+    transition: .2s;
 }
 
 .h3-text{

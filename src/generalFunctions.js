@@ -36,13 +36,37 @@ Args:
 function appendAChild(parent, child) {
     parent.appendChild(child);
 }
-
-
 export function createTextSection(headingText, headingClass, headingId, paragraphText, paragraphClass, paragraphId, container){
     const heading = createElement('h3', headingClass, headingId, headingText);
     const p = createElement('p', paragraphClass, paragraphId, paragraphText);
     appendAChild(container, heading);
     appendAChild(container, p);
 
-    return
+    return container
 }
+
+// export function createSection(type, attributes, ...children){
+//     const element = document.createElement(type);
+
+//     for (key in attributes){
+//         element.setAttribute = (key, attributes[key]);
+//     }
+
+//     children.forEach(child => {
+//         if (typeof child === 'string'){
+//             element.appendChild(document.createTextNode(child));
+//         } else {
+//             element.appendChild(child);
+//         }
+//     })
+
+//     children.forEach(child => {
+//     if (typeof child === 'string') {
+//       el.appendChild(document.createTextNode(child))
+//     } else {
+//       el.appendChild(child)
+//     }
+//   })
+//     return element;
+// }
+

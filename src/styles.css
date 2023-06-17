@@ -28,7 +28,6 @@
 .header{
     background-color: var(--color1);
     height:100px;
-
     display: grid;
     grid-template-columns: 1fr 4fr;
     grid-template-rows: 1fr;
@@ -39,9 +38,8 @@
     grid-column: 2/3;
     display: flex;
     gap: 30px;
-    margin-right: 30px;
+    margin-right: 50px;
 }
-
 
 .nav-item-container {
     white-space: nowrap;
@@ -51,14 +49,9 @@
     flex: 1;
 }
 
-.nav-item{
-
-}
-
 #logo-container{
     justify-self: left;
     grid-column: 1/2;
-
     background-color: var(--color3);;
     height: 50px;
     width: 100px;
@@ -148,7 +141,7 @@
     font-family: var(--font-regular);
 }
 
-.paragraph{
+.paragraph, .section3list{
     font-size: var(--p-size);
     font-family: var(--font-regular);
 }
@@ -166,4 +159,89 @@ a{
 
 .textSection{
     width: 400px;
+}
+
+.sectionText{
+    flex: 1;
+}
+
+.sectionText .h2-text{
+    font-size: var(--h2-size);
+    font-family: var(--font-regular);
+}
+
+#pe-section1-img, #pe-section2-img{
+    width: min(30vw, 300px);
+    height: auto;
+    opacity: 0.8;
+
+}
+
+#pe-section1, #pe-section2{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+#pe-section3Text{
+    color: var(--color5);
+}
+
+#pe-section3Text > ul{
+    font-size: var(--h3-size);
+}
+
+#pricingBreakdown-cont{
+    display: flex;
+    flex-direction: column;
+}
+
+#pricingBreakdownPackages{
+    display: flex;
+    padding: var(--section-padding);
+    padding-top: 0px; 
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+#pricingBreakdown-cont{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0px;
+}
+
+#h2-pricing-breakdown{
+    font-size: var(--h2-size);
+    font-family: var(--font-regular);
+    color: var(--color2)
+}
+
+.pricing-package{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    font-size: var(--p-size);
+    font-family: var(--font-regular);
+    background-color: var(--color4);
+    border: 1px solid var(--color1);
+    padding: 0px;
+}
+
+.list-container{
+    display: flex;
+    height: 50px;
+    width: 300px;
+    padding: 20px;
+    justify-content: center;
+    text-align: center;
+    border: 0.02px solid var(--color1);
+    align-items: center;
+}
+
+.list-item-0{
+    font-size: var(--h2-size);
+    font-family: var(--font-bold);
+    color: var(--color3)
 }

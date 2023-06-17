@@ -2,7 +2,9 @@ import './styles.css';
 import {homeMainContent} from './mainContent/homeMainContent.js';
 import {headerContent} from './headerContent.js';
 import {footerContent} from './footerContent.js';
+import {renderContent} from './generalFunctions.js';
 
+//Create default sections for Home Page
 const mainContainer = document.querySelector('#content');
 const headerContainer = document.createElement('div', '', 'header-container');
 const middleContainer = document.createElement('div', '', 'middle-container');
@@ -16,22 +18,8 @@ renderContent(headerContent, headerContainer);
 renderContent(homeMainContent, middleContainer);
 renderContent(footerContent, footerContainer);
 
-
 //Add on-click event for each nav bar link and render its content
 const navBar = document.querySelectorAll('.nav-item');
 navBar.forEach(element => element.addEventListener('click', ()=>{
     renderContent(element.content, middleContainer); }
 ));
-
-/*
-Render content in a container
-Args:
-    -page: Content to be rendered
-    -container: Container whom content will be rendered to
-*/
-function renderContent(page, container){
-    const newPage = page();
-    const mainContainer = container;
-    mainContainer.innerHTML = '';
-    mainContainer.appendChild(newPage);
-}

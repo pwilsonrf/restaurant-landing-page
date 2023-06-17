@@ -5,7 +5,7 @@ import {createElement, appendAChild, createTextSection} from '../generalFunction
 export function homeMainContent() {
     const mainContainer = createElement('div', 'body-container');
 
-    //Section 1 Content
+    //Section 1 Content - TOP
     const section1 = createElement('div', 'section1');
     appendAChild(mainContainer, section1);
     
@@ -30,7 +30,7 @@ export function homeMainContent() {
     appendAChild(section1, section1left);
     appendAChild(section1, section1right);
 
-    //Section 2
+    //Section 2 - PE Walk with Confidence - MIDDLE
     const section2 = createElement('div', 'section2');
     const section2TextContainer = createElement('div', 'section2TextContainer');
     const section2Text = createElement('div', 'section2Text');
@@ -48,7 +48,7 @@ export function homeMainContent() {
     appendAChild(section2, section2ButtonContainer);
     appendAChild(mainContainer, section2);
 
-    //Section 3
+    //Section 3 - Trusted Partners - MIDDLE
     const section3 = createElement('div', 'section3');
     const section3TextContainer = createElement('div', 'section3TextContainer');
     const section3Text = createElement('div', 'section3Text');
@@ -66,7 +66,7 @@ export function homeMainContent() {
     appendAChild(section3, section3ButtonContainer);
     appendAChild(mainContainer, section3);
 
-    //Section 4 - Our Tutors
+    //Section 4 - Our Tutors - BOTTOM
     const section4 = createElement('div', 'section4');
     const section4Text = createElement('div', 'section4Text')
     createTextSection('Meet Our Tutors!', 'h3-text', 'h3-pe-section',

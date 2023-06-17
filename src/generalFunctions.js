@@ -1,5 +1,5 @@
 
-export {createElement, appendAChild}
+export {createElement, appendAChild, renderContent}
 /*
 Create element and append to DOM
 Args:
@@ -45,28 +45,16 @@ export function createTextSection(headingText, headingClass, headingId, paragrap
     return container
 }
 
-// export function createSection(type, attributes, ...children){
-//     const element = document.createElement(type);
-
-//     for (key in attributes){
-//         element.setAttribute = (key, attributes[key]);
-//     }
-
-//     children.forEach(child => {
-//         if (typeof child === 'string'){
-//             element.appendChild(document.createTextNode(child));
-//         } else {
-//             element.appendChild(child);
-//         }
-//     })
-
-//     children.forEach(child => {
-//     if (typeof child === 'string') {
-//       el.appendChild(document.createTextNode(child))
-//     } else {
-//       el.appendChild(child)
-//     }
-//   })
-//     return element;
-// }
+/*
+Render content in a container
+Args:
+    -page: Content to be rendered
+    -container: Container whom content will be rendered to
+*/
+function renderContent(page, container){
+    const newPage = page();
+    const mainContainer = container;
+    mainContainer.innerHTML = '';
+    mainContainer.appendChild(newPage);
+}
 

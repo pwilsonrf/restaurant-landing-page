@@ -1,13 +1,10 @@
 import {peExamMainContent} from './mainContent/peExamMainContent.js';
 import {pricingMainContent} from './mainContent/pricingMainContent.js';
-import {feExamMainContent} from './mainContent/feExamMainContent.js';
-import {aboutMainContent} from './mainContent/aboutMainContent.js';
-import {successStoriesMainContent} from './mainContent/successStoriesMainContent.js';
 import {homeMainContent} from './mainContent/homeMainContent.js';
 import {createElement, appendAChild} from './generalFunctions';
 
 /*
-Creates header content
+Creates header container with nav bar
 */
 export function headerContent (){
     //Create header, logo and navbar containers
@@ -17,20 +14,14 @@ export function headerContent (){
 
     // Create Nav Bar Containers
     const homeCont = createElement('div', 'nav-item-container');
-    const aboutCont = createElement('div', 'nav-item-container');
-    const successStoriesCont = createElement('div', 'nav-item-container');
     const peExamCont = createElement('div', 'nav-item-container');
     const pricingCont = createElement('div', 'nav-item-container');
-    const feExamCont = createElement('div', 'nav-item-container');
-    const navBarMenu = [homeCont, feExamCont, peExamCont, successStoriesCont, pricingCont, aboutCont];
+    const navBarMenu = [homeCont, peExamCont, pricingCont];
 
     //Create Nav Bar Links
     createElement('a', 'nav-item', 'home-link', 'Home', homeCont, '#', homeMainContent);
     createElement('a', 'nav-item', 'peExam-link', 'PE Exam', peExamCont, '#', peExamMainContent);
-    createElement('a', 'nav-item', 'success-stories-link', 'Success Stories', successStoriesCont, '#', successStoriesMainContent);
     createElement('a', 'nav-item', 'pricing-link', 'Pricing', pricingCont, '#', pricingMainContent);
-    createElement('a', 'nav-item', 'about-link', 'About', aboutCont, '#', aboutMainContent);
-    createElement('a', 'nav-item', 'feExam-link', 'FE Exam', feExamCont, '#', feExamMainContent);
 
     //Append Nav Bar children
     for (let i = 0; i < navBarMenu.length; i++){
